@@ -1,0 +1,25 @@
+{
+	"name": "ds_des",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dest",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"sinkfile": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().sinkfile",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
